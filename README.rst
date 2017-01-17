@@ -30,8 +30,10 @@ remplacement du module ``neopixel.py`` pour Raspberry Pi fourni par le projet
 
 Vous devez seulement changer une ligne de votre code pour basculer entre
 l'émulateur et l'écran de leds. Remplacez la ligne
+
   from neopixel import *
 par
+
   from vrtneopixel import *
 Le nombre de leds de l'écran est passé en tant que premier paramètre lors de
 l'appel à ``Adafruit_NeoPixel()``. On utilise en général une variable ``LED_COUNT`` 
