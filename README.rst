@@ -7,10 +7,8 @@ This module can be used to emulate a WS2812 Matrix in replacement of the
 
 You must only change one line of your code in order to switch between 
 emulator and real matrix. Replace the line
-.. code::python
   from neopixel import *
 by
-.. code::python
   from vrtneopixel import *
 The number of leds of your matrix is specified in the ``Adafruit_NeoPixel()``
 call as the first parameter. We generally use a ``LED_COUNT`` variable and two 
@@ -30,10 +28,8 @@ remplacement du module ``neopixel.py`` pour Raspberry Pi fourni par le projet
 
 Vous devez seulement changer une ligne de votre code pour basculer entre
 l'émulateur et l'écran de leds. Remplacez la ligne
-.. code::python
   from neopixel import *
 par
-.. code::python
   from vrtneopixel import *
 Le nombre de leds de l'écran est passé en tant que premier paramètre lors de
 l'appel à ``Adafruit_NeoPixel()``. On utilise en général une variable ``LED_COUNT`` 
