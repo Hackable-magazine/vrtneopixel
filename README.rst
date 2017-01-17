@@ -1,6 +1,9 @@
 WS2812 Matrix Emulator
 =======================
 
+[![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
+
+
 This module can be used to emulate a WS2812 Matrix in replacement of the
 ``neopixel.py`` module for the Raspberry Pi provided by the **rpi_ws281x** project 
 (<https://github.com/jgarff/rpi_ws281x>).
