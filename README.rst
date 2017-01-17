@@ -7,10 +7,10 @@ This module can be used to emulate a WS2812 Matrix in replacement of the
 
 You must only change one line of your code in order to switch between 
 emulator and real matrix. Replace the line
-```python
+
   from neopixel import *
-```
 by
+
   from vrtneopixel import *
 The number of leds of your matrix is specified in the ``Adafruit_NeoPixel()``
 call as the first parameter. We generally use a ``LED_COUNT`` variable and two 
