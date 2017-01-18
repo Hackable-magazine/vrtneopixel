@@ -37,5 +37,5 @@ setup(
 
     keywords='emulator ws2812 neopixel rpi_ws281x RaspberryPi',
 
-    install_requires=['matplotlib'],
+    install_requires=['pygame'],
 )
