@@ -47,6 +47,7 @@ class Adafruit_NeoPixel:
     def begin(self):
         self._begin = True
         pygame.init()
+        pygame.display.set_caption('WS2812 Matrix Emulator')
         self._width = self._marg + (self._cols * (self._psize + self._pgap)) + \
                       (self._marg - self._pgap)
         self._height = self._marg + (self._rows * (self._psize + self._pgap)) + \
