@@ -12,7 +12,7 @@ setup(
 
     packages=['vrtneopixel'],
 
-    version='1.1.2',
+    version='1.1.3',
 
     description='A WS2812 matrix emulator',
     long_description=long_description,

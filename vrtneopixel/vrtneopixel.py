@@ -39,6 +39,15 @@ class Adafruit_NeoPixel:
         self._marg = self._psize
         # pixels
         self._pixel = []
+        # screen
+        self._screen = None
+        # draw surface
+        self._surface = None
+        # Windows size
+        self._width = self._marg + (self._cols * (self._psize + self._pgap)) + \
+                      (self._marg - self._pgap)
+        self._height = self._marg + (self._rows * (self._psize + self._pgap)) + \
+                       (self._marg - self._pgap)
 
     def _beginTestError(self):
         if not self._begin:
@@ -48,21 +57,17 @@ class Adafruit_NeoPixel:
         self._begin = True
         pygame.init()
         pygame.display.set_caption('WS2812 Matrix Emulator')
-        self._width = self._marg + (self._cols * (self._psize + self._pgap)) + \
-                      (self._marg - self._pgap)
-        self._height = self._marg + (self._rows * (self._psize + self._pgap)) + \
-                       (self._marg - self._pgap)
         self._screen = pygame.display.set_mode((self._width, self._height))
         self._screen.fill((255, 255, 255))
-        self._surf = pygame.display.get_surface()
+        self._surface = pygame.display.get_surface()
 
         for row in range(self._rows):
             for col in range(self._cols):
                 self._pixel.append(pygame.Rect(self._marg + (col * (self._psize + self._pgap)),
                                                self._marg + (row * (self._psize + self._pgap)),
                                                self._psize, self._psize))
-                self._surf.fill((0, 0, 0),
-                                self._pixel[(row * self._rows) + col])
+                self._surface.fill((0, 0, 0),
+                                   self._pixel[(row * self._rows) + col])
         pygame.display.flip()
 
     def getPixelColor(self, n):
@@ -91,16 +96,11 @@ class Adafruit_NeoPixel:
         if n < self.numPixels():
             self._leds[n] = Color(red, green, blue)
 
-    def _lineToMatrix(self, n):
-        col = n // self._rows
-        row = n % self._rows
-        return (col, row)
-
     def show(self):
         self._beginTestError()
         pygame.display.flip()
         for pix in range(len(self._leds)):
-            self._surf.fill(_invColor(self._leds[pix]), self._pixel[pix])
+            self._surface.fill(_invColor(self._leds[pix]), self._pixel[pix])
         pygame.display.flip()
         for event in pygame.event.get(pygame.QUIT):
             exit(0)
