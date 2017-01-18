@@ -42,4 +42,4 @@ pour laquelle deux types sont autorisés:
 
 * un entier simple : nombre total de leds composant l'écran, doit avoir une racine carrée entière (ie. 16 -> 4x4 matrix, etc.).
 
-* un tuple (rowsi, cols) : nombre de lignes et de colonnes de l'écran.
+* un tuple (rows, cols) : nombre de lignes et de colonnes de l'écran.
