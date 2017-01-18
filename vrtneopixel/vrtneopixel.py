@@ -30,7 +30,7 @@ class Adafruit_NeoPixel:
         self._channel = channel
         self._strip_type = strip_type
 
-        # Graphic parameters
+        # Graphic parameters
         # pixel size
         self._psize = led_size
         # gap between pixel
