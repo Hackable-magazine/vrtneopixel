@@ -15,9 +15,9 @@ by
 The number of leds of your matrix is specified in the ``Adafruit_NeoPixel()``
 call as the first parameter. We generally use a ``LED_COUNT`` variable and two 
 types are allowed:
-- simple integer : total number of leds in the matrix, must have an integer 
+* simple integer : total number of leds in the matrix, must have an integer 
 square root (ie. 16 -> 4x4 matrix, etc.).
-- tuple (rows, cols) : number of rows and columns of the matrix.
+* tuple (rows, cols) : number of rows and columns of the matrix.
 
 ----
 
@@ -38,6 +38,6 @@ par
 Le nombre de leds de l'écran est passé en tant que premier paramètre lors de
 l'appel à ``Adafruit_NeoPixel()``. On utilise en général une variable ``LED_COUNT`` 
 pour laquelle deux types sont autorisés:
-- un entier simple : nombre total de leds composant l'écran, doit avoir une racine
+* un entier simple : nombre total de leds composant l'écran, doit avoir une racine
 carrée entière (ie. 16 -> 4x4 matrix, etc.).
-- un tuple (rowsi, cols) : nombre de lignes et de colonnes de l'écran.
+* un tuple (rowsi, cols) : nombre de lignes et de colonnes de l'écran.
